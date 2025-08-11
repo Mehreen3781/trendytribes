@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trendy Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+    <!-- Brand / Logo -->
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <!-- logo mark (text-based) -->
+      <div class="logo-mark">TT</div>
+      <div class="brand-text">
+        <span class="brand-tt">Trendy</span><span class="brand-name"> Tribes</span>
+      </div>
+    </a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+      aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Nav links -->
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+         <li class="nav-item"><a class="nav-link" href="new_collection.html">New Collection</a></li>
+          <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+        <li class="nav-item"><a class="nav-link" href="bags.html">Bags</a></li>
+        <li class="nav-item"><a class="nav-link" href="contect.html">Contact</a></li>
+        <li class="nav-item d-none d-lg-block ms-3">
+         
+        </li>
+        <li class="nav-item ms-3 position-relative">
+          <a class="btn btn-transparent position-relative p-0" href="new_collection.html" aria-label="Cart">
+            <i class="bi bi-cart-fill fs-5 text-dark"></i>
+            <span id="cartCount" class="cart-badge badge rounded-pill">0</span>
+          </a>
+        </li>
+        <li class="nav-item ms-2">
+          <a href="index.html" class="btn btn-cta btn-sm">Sign In</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!----------------------------------------------------java script code here for navbar-->
+<script>
+  (function(){
+    const nav = document.getElementById('mainNavbar');
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > 40) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+    // example: update cart count (replace with real logic later)
+    // document.getElementById('cartCount').textContent = 2;
+  })();
+</script>
+
+<!-- Bootstrap JS bundle (if not already included) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+<!----------------------------NAVBAR-------------ENDED===HERE============------>
+
+
+
+
+<section id="products" class="py-4">
+  <div class="container">
+    <h2 class="text-center mb-4 fw-bold">ZEELBURY</h2>
+    <div class="row g-3 justify-content-center">
+
+      <!-- Product 1 -->
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+        <div class="card product-card h-100">
+          <img src="bags/zulbaryback3.png" class="card-img-top product-img" alt="Bags">
+          <div class="card-body text-center p-2">
+            <h6 class="card-title mb-1">Azadi Sale is live now</h6>
+            <p class="card-text text-muted small mb-1">PKR 2450</p>
+
+<button class="btn btn-add-cart" 
+              onclick="sendWhatsApp('ZELLBURY', 'PKR 2450', 'bags/zulbaryback3.png')">
+              Add to Cart
+            </button>
+
+             
+
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+        <div class="card product-card h-100">
+          <img src="bags/zulbeerybrown.png" class="card-img-top product-img" alt="Lawn Dresses">
+          <div class="card-body text-center p-2">
+                    <h6 class="card-title mb-1">Azadi Sale is live now</h6>
+            <p class="card-text text-muted small mb-1">PKR 2450</p>
+
+<button class="btn btn-add-cart" 
+              onclick="sendWhatsApp('ZELLBURY', 'PKR 2450', 'bags/zulbeerybrown.png')">
+              Add to Cart
+            </button>
+
+
+           
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+        <div class="card product-card h-100">
+          <img src="bags/zulbaryhandbagbrown.png" class="card-img-top product-img" alt="Lip Gloss">
+          <div class="card-body text-center p-2">
+            <h6 class="card-title mb-1">Azadi Sale is Live Now</h6>
+            <p class="card-text text-muted small mb-1">PKR 2200</p>
+
+            <button class="btn btn-add-cart" 
+              onclick="sendWhatsApp('Azadi Collection', 'PKR 2200', 'bags/zulbaryhandbagbrown.png')">
+              Add to Cart
+            </button>
+
+
+            <!-- <a href="product.html?id=3" 
+ class="btn btn-add-cart btn-sm">Add to Cart</a> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+        <div class="card product-card h-100">
+          <img src="bags/zulbaryhandbag.png" class="card-img-top product-img" alt="Face Serum">
+          <div class="card-body text-center p-2">
+            <h6 class="card-title mb-1">Azadi Sale is Live Now</h6>
+            <p class="card-text text-muted small mb-1">PKR 2200</p>
+
+<button class="btn btn-add-cart" 
+              onclick="sendWhatsApp('Azadi Collection'  , 'PKR 2200', 'bags/zulbaryhandbag.png')">
+              Add to Cart
+            </button>
+
+          
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-----------------------------------java scripts codes here for add to cart button----------->
+
+<script>
+function sendWhatsApp(productName, productPrice, productImage) {
+    const phone = "923163327450";
+    const websiteBaseURL = window.location.origin + "/"; // website ka base URL
+    const fullImageURL = websiteBaseURL + productImage;
+
+    const message = `I am interested to buy this product:\n${productName} - ${productPrice}\nImage: ${fullImageURL}`;
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+}
+</script>
+
+<!-----------------------------------java scripts codes here for add to cart button----------->
+
+<section id="products" class="py-4">
+  <div class="container">
+    <h2 class="text-center mb-4 fw-bold">14 August Sale Live </h2>
+    <div class="row g-3 justify-content-center">
+
+      <!-- Product 1 -->
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+        <div class="card product-card h-100">
+          <img src="bags/canvasbrwondark.png" class="card-img-top product-img" alt="Bags">
+          <div class="card-body text-center p-2">
+            <h6 class="card-title mb-1"> Canvas Bag</h6>
+            <p class="card-text text-muted small mb-1">PKR 2000</p>
+          
+              <button class="btn btn-add-cart" 
+              onclick="sendWhatsApp('canvas bag '  , 'PKR 2000', ' ')">
+              Add to Cart
+            </button>
+
+    
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+        <div class="card product-card h-100">
+          <img src="bags/canvastotebagblue.png" class="card-img-top product-img" alt="Lawn Dresses">
+          <div class="card-body text-center p-2">
+
+           <h6 class="card-title mb-1"> Canvas Bag</h6>
+            <p class="card-text text-muted small mb-1">PKR 2000</p>
+          
+              <button class="btn btn-add-cart" 
+              onclick="sendWhatsApp('canvas bag '  , 'PKR 2000', ' ')">
+              Add to Cart
+            </button>
+
+
+
+
+
+           
+           
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+        <div class="card product-card h-100">
+            <img src="bags/canvasblack.png" class="card-img-top product-img" alt="Lawn Dresses">
+          <div class="card-body text-center p-2">
+
+           <h6 class="card-title mb-1"> Canvas Bag</h6>
+            <p class="card-text text-muted small mb-1">PKR 2000</p>
+          
+              <button class="btn btn-add-cart" 
+              onclick="sendWhatsApp('canvas bag '  , 'PKR 2000', ' ')">
+              Add to Cart
+            </button>
+
+
+
+
+         
+                        
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+        <div class="card product-card h-100">
+
+            <img src="bags/canvasmustured.png" class="card-img-top product-img" alt="Lawn Dresses">
+          <div class="card-body text-center p-2">
+
+           <h6 class="card-title mb-1"> Canvas Bag</h6>
+            <p class="card-text text-muted small mb-1">PKR 2000</p>
+          
+              <button class="btn btn-add-cart" 
+              onclick="sendWhatsApp('canvas bag '  , 'PKR 2000', ' ')">
+              Add to Cart
+            </button>
+
+          
+                        
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section id="products" class="py-4">
+  <div class="container">
+    <h2 class="text-center mb-4 fw-bold">ZEELBURY</h2>
+    <div class="row g-3 justify-content-center">
+
+      <!-- Product 1 -->
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+        <div class="card product-card h-100">
+          <img src="bags/zulbaryprintingblack.png" class="card-img-top product-img" alt="Bags">
+          <div class="card-body text-center p-2">
+            <h6 class="card-title mb-1">Azadi Sale is live now</h6>
+            <p class="card-text text-muted small mb-1">PKR 2450</p>
+
+<button class="btn btn-add-cart" 
+              onclick="sendWhatsApp('ZELLBURY', 'PKR 2450', 'bags/zulbaryback3.png')">
+              Add to Cart
+            </button>
+
+             
+
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+        <div class="card product-card h-100">
+          <img src="bags/zullbarybrown44.png" class="card-img-top product-img" alt="Lawn Dresses">
+          <div class="card-body text-center p-2">
+                    <h6 class="card-title mb-1">Azadi Sale is live now</h6>
+            <p class="card-text text-muted small mb-1">PKR 2450</p>
+
+<button class="btn btn-add-cart" 
+              onclick="sendWhatsApp('ZELLBURY', 'PKR 2450', 'bags/zulbeerybrown.png')">
+              Add to Cart
+            </button>
+
+
+           
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+        <div class="card product-card h-100">
+          <img src="bags/zullabarydartgreen.png" class="card-img-top product-img" alt="Lip Gloss">
+          <div class="card-body text-center p-2">
+            <h6 class="card-title mb-1">Azadi Sale is Live Now</h6>
+            <p class="card-text text-muted small mb-1">PKR 2200</p>
+
+            <button class="btn btn-add-cart" 
+              onclick="sendWhatsApp('Azadi Collection', 'PKR 2200', 'bags/zulbaryhandbagbrown.png')">
+              Add to Cart
+            </button>
+
+
+            <!-- <a href="product.html?id=3" 
+ class="btn btn-add-cart btn-sm">Add to Cart</a> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+        <div class="card product-card h-100">
+          <img src="bags/zullbarybrown3.png" class="card-img-top product-img" alt="Face Serum">
+          <div class="card-body text-center p-2">
+            <h6 class="card-title mb-1">Azadi Sale is Live Now</h6>
+            <p class="card-text text-muted small mb-1">PKR 2200</p>
+
+<button class="btn btn-add-cart" 
+              onclick="sendWhatsApp('Azadi Collection'  , 'PKR 2200', 'bags/zulbaryhandbag.png')">
+              Add to Cart
+            </button>
+
+          
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer-light py-5">
+  <div class="container">
+    <div class="row align-items-start">
+
+      <!-- Brand & About -->
+      <div class="col-md-4 mb-4">
+        <h4 class="fw-bold">Trendy Tribes</h4>
+        <p class="footer-text">
+          Your go-to store for the latest fashion, beauty & lifestyle trends. 
+          Stay stylish every day with Trendy Tribes.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="footer-link">Home</a></li>
+          <li><a href="#" class="footer-link">Products</a></li>
+          <li><a href="#" class="footer-link">About</a></li>
+          <li><a href="#" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold">Follow Us</h5>
+        <div class="social-icons">
+             <a href="https://www.facebook.com/share/16otiZmav8/" target="_blank">
+  <i class="bi bi-facebook"></i></a>
+ <a href="https://chat.whatsapp.com/GlYE7wxtqlLIA38MpReVx7" target="_blank" title="Join our WhatsApp Community">
+  <i class="bi bi-whatsapp"></i></a>
+<a href="https://ig.me/236HGUqRsHWDdsp" target="_blank">
+  <i class="bi bi-instagram"></i></a>
+ <a href="https://whatsapp.com/channel/0029Vb9vCxcKGGGIiOGsyU2Q"><i class="bi bi-whatsapp"></i></a>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-4">
+      <p class="small mb-0">© 2025 Trendy Tribes | Designed with ❤️</p>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+</body>

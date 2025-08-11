@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Details</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    .product-img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+    .buy-btn {
+        background-color: #25d366;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    .buy-btn:hover {
+        background-color: #1da851;
+    }
+</style>
+</head>
+<body class="p-4">
+
+<div class="container">
+    <div id="product-details" class="row"></div>
+</div>
+
+<script>
+// Product Data
+const products = [
+    { id: 1, name: "Bags", price: "$15.00", img: "bags/bag.png" },
+    { id: 2, name: "Lawn Dress", price: "PKR 2500", img: "dress/12august2.png" },
+    { id: 3, name: "Lip Gloss", price: "PKR 800", img: "images/pexels-828860-2587370 (1).jpg" },
+    { id: 4, name: "Lawn Dress", price: "PKR 1800", img: "images/pexels-kpaukshtite-3270222.jpg" },
+    { id: 5, name: "Summer Collection", price: "$15.00", img: "bags/bag.png" },
+    { id: 6, name: "Summer Collection", price: "PKR 2500", img: "dress/12august2.png" },
+    { id: 7, name: "Summer Collection", price: "PKR 800", img: "images/pexels-828860-2587370 (1).jpg" },
+    { id: 8, name: "Summer Collection", price: "PKR 1800", img: "images/pexels-kpaukshtite-3270222.jpg" }
+
+];
+
+// Get ID from URL
+const urlParams = new URLSearchParams(window.location.search);
+const id = parseInt(urlParams.get("id"));
+
+// Find Product
+const product = products.find(p => p.id === id);
+
+// Show Product Details
+if (product) {
+    document.getElementById("product-details").innerHTML = `
+        <div class="col-md-6">
+            <img src="${product.img}" alt="${product.name}" class="product-img">
+        </div>
+        <div class="col-md-6">
+            <h1>${product.name}</h1>
+            <h4 class="text-muted">${product.price}</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel tincidunt faucibus.</p>
+            <a class="buy-btn" href="https://wa.me/923163327450?text=Hi, I want to order ${encodeURIComponent(product.name)} for ${encodeURIComponent(product.price)}">
+                Buy Now on WhatsApp
+            </a>
+        </div>
+    `;
+} else {
+    document.getElementById("product-details").innerHTML = "<h3>Product not found!</h3>";
+}
+</script>
+
+</body>
+</html>

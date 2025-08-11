@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trendy Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+    <!-- Brand / Logo -->
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <!-- logo mark (text-based) -->
+      <div class="logo-mark">TT</div>
+      <div class="brand-text">
+        <span class="brand-tt">Trendy</span><span class="brand-name"> Tribes</span>
+      </div>
+    </a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+      aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Nav links -->
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+         <li class="nav-item"><a class="nav-link" href="new_collection.html">New Collection</a></li>
+          <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Bags</a></li>
+        <li class="nav-item"><a class="nav-link" href="contect.html">Contact</a></li>
+        <li class="nav-item d-none d-lg-block ms-3">
+          <!-- <form class="d-flex align-items-center" onsubmit="return false;">
+            <input class="form-control form-control-sm search-input" type="search" placeholder="Search products">
+          </form> -->
+        </li>
+        <li class="nav-item ms-3 position-relative">
+          <a class="btn btn-transparent position-relative p-0" href="new_collection.html" aria-label="Cart">
+            <i class="bi bi-cart-fill fs-5 text-dark"></i>
+            <span id="cartCount" class="cart-badge badge rounded-pill">0</span>
+          </a>
+        </li>
+        <li class="nav-item ms-2">
+          <a href="index.html" class="btn btn-cta btn-sm">Sign In</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!----------------------------------------------------java script code here for navbar-->
+<script>
+  (function(){
+    const nav = document.getElementById('mainNavbar');
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > 40) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+    // example: update cart count (replace with real logic later)
+  // document.getElementById('cartCount').textContent = 2;
+  })();
+</script>
+
+<!-- Bootstrap JS bundle (if not already included) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+<!----------------------------NAVBAR-------------ENDED===HERE============-->
+
+<section id="hero-slider" class="mt-0">
+  <div id="mainCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    
+    <div class="carousel-inner">
+      
+      <!-- Slide 1 -->
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+      <div class="carousel-item active">
+        <img src="images/indepanceslider.png.jpg" class="d-block w-100 slider-img" alt="Fashion Banner 1">
+        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+          <!-- <h2 class="display-5 fw-bold">Summer Collection 2025</h2> -->
+          <!-- <p>Discover fresh styles for the sunny season</p> -->
+          <!-- <a href="#products" class="btn btn-cta btn-lg mt-2">Shop Now</a> -->
+        </div>
+      </div>
+      
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <img src="images/pexels-misolo-cosmetic-2588316-4841526.jpg" class="d-block w-100 slider-img" alt="Fashion Banner 2">
+        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+          <h2 class="display-5 fw-bold">Beauty Essentials</h2>
+          <p>Everything you need for a radiant look</p>
+          <a href="#products" class="btn btn-cta btn-lg mt-2">Explore</a>
+        </div>
+      </div>
+      
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <img src="images/beautiful-woman-sitting-home-with-electronic-devices-shopping-bags-credit-card-hand.jpg" class="d-block w-100 slider-img" alt="Fashion Banner 3">
+        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+          <h2 class="display-5 fw-bold">Exclusive Discounts</h2>
+          <p>Grab your favourites before they're gone</p>
+          <a href="#products" class="btn btn-cta btn-lg mt-2">View Deals</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
+  </div>
+</section>
+
+
+
+
+<!-----------------------------------------------------------------CARDS HERE------------------->
+
+
+<section id="products" class="py-4">
+  <div class="container">
+    <h2 class="text-center mb-4 fw-bold">Featured Products</h2>
+    <div class="row g-3 justify-content-center">
+
+      <!-- Product 1 -->
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+        <div class="card product-card h-100">
+          <img src="bags/bag.png" class="card-img-top product-img" alt="Bags">
+          <div class="card-body text-center p-2">
+            <h6 class="card-title mb-1">Bags</h6>
+            <p class="card-text text-muted small mb-1">PKR 2200</p>
+
+<button class="btn btn-add-cart" 
+              onclick="sendWhatsApp('Bag', 'PKR 2200', 'bags/bag.png')">
+              Add to Cart
+            </button>
+
+             <!-- <a href=" product.html?id=1"
+ class="btn btn-add-cart btn-sm">Add to Cart</a>  -->
+    
+
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+        <div class="card product-card h-100">
+          <img src="dress/12august2.png" class="card-img-top product-img" alt="Lawn Dresses">
+          <div class="card-body text-center p-2">
+            <h6 class="card-title mb-1">Lawn Dresses</h6>
+            <p class="card-text text-muted small mb-1">PKR 2500</p>
+
+
+            <button class="btn btn-add-cart" 
+              onclick="sendWhatsApp('Lawn Dress', 'PKR 2500', 'dress/12august2.png')">
+              Add to Cart
+            </button>
+
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+        <div class="card product-card h-100">
+          <img src="images/pexels-828860-2587370 (1).jpg" class="card-img-top product-img" alt="Lip Gloss">
+          <div class="card-body text-center p-2">
+            <h6 class="card-title mb-1">Lip Gloss</h6>
+            <p class="card-text text-muted small mb-1">PKR 800</p>
+
+            <button class="btn btn-add-cart" 
+              onclick="sendWhatsApp('Face Serum', 'PKR 1800', 'images/pexels-kpaukshtite-3270222.jpg')">
+              Add to Cart
+            </button>
+
+
+            <!-- <a href="product.html?id=3" 
+ class="btn btn-add-cart btn-sm">Add to Cart</a> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+        <div class="card product-card h-100">
+          <img src="dress/14august.5png.jfif" class="card-img-top product-img" alt="Face Serum">
+          <div class="card-body text-center p-2">
+            <h6 class="card-title mb-1">Lawn Dress</h6>
+            <p class="card-text text-muted small mb-1">PKR 2200</p>
+
+<button class="btn btn-add-cart" 
+              onclick="sendWhatsApp('Lawn Dress'  , 'PKR 2200', 'dress/14august.5png.jfif ')">
+              Add to Cart
+            </button>
+
+          
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-----------------------------------java scripts codes here for add to cart button----------->
+
+<script>
+function sendWhatsApp(productName, productPrice, productImage) {
+    const phone = "923163327450";
+    const websiteBaseURL = window.location.origin + "/"; // website ka base URL
+    const fullImageURL = websiteBaseURL + productImage;
+
+    const message = `I am interested to buy this product:\n${productName} - ${productPrice}\nImage: ${fullImageURL}`;
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+}
+</script>
+
+<!-----------------------------------java scripts codes here for add to cart button----------->
+
+<section id="products" class="py-4">
+  <div class="container">
+    <h2 class="text-center mb-4 fw-bold">New Collection</h2>
+    <div class="row g-3 justify-content-center">
+
+      <!-- Product 1 -->
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+        <div class="card product-card h-100">
+          <img src="dress/summercellectionbluegreen.png" class="card-img-top product-img" alt="Bags">
+          <div class="card-body text-center p-2">
+            <h6 class="card-title mb-1">Summer Collection</h6>
+            <p class="card-text text-muted small mb-1">PKR 2900</p>
+          
+              <button class="btn btn-add-cart" 
+              onclick="sendWhatsApp('Summer Collection   '  , 'PKR 2900', 'dress/14august.5png.jfif ')">
+              Add to Cart
+            </button>
+
+    
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+        <div class="card product-card h-100">
+          <img src="dress//summercollctionoffwhite3d.png" class="card-img-top product-img" alt="Lawn Dresses">
+          <div class="card-body text-center p-2">
+            <h6 class="card-title mb-1">Summer Collection</h6>
+            <p class="card-text text-muted small mb-1">PKR 2900</p>
+        
+              <button class="btn btn-add-cart" 
+              onclick="sendWhatsApp('Summer Collection   '  , 'PKR 2900', 'dress/14august.5png.jfif ')">
+              Add to Cart
+            </button>
+           
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+        <div class="card product-card h-100">
+          <img src="dress/summercollctionwhite.png" class="card-img-top product-img" alt="Lip Gloss">
+          <div class="card-body text-center p-2">
+            <h6 class="card-title mb-1">Summer Collection</h6>
+            <p class="card-text text-muted small mb-1">PKR 2900</p>
+      
+                <button class="btn btn-add-cart" 
+              onclick="sendWhatsApp('Summer Collection   '  , 'PKR 2900', ' dress/summercollctionwhite.png  ')">
+              Add to Cart
+            </button>
+
+                        
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+        <div class="card product-card h-100">
+          <img src="dress/summercollectionblackskin.png" class="card-img-top product-img" alt="Face Serum">
+          <div class="card-body text-center p-2">
+            <h6 class="card-title mb-1">Summer Collection</h6>
+            <p class="card-text text-muted small mb-1">PKR 2900</p>
+              <button class="btn btn-add-cart" 
+              onclick="sendWhatsApp('Summer Collection   '  , 'PKR 2900', 'dress/summercollectionblackskin.png ')">
+              Add to Cart
+            </button>
+
+                        
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<section id="products" class="py-4">
+  <div class="container">
+    <h2 class="text-center mb-4 fw-bold">Brands Collection</h2>
+    <div class="row g-3 justify-content-center">
+
+      <!-- Product 1 -->
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+        <div class="card product-card h-100">
+          <img src="bags/bag.png" class="card-img-top product-img" alt="Bags">
+          <div class="card-body text-center p-2">
+            <h6 class="card-title mb-1">Bag</h6>
+            <p class="card-text text-muted small mb-1">PKR 1500</p>
+               <button class="btn btn-add-cart" 
+              onclick="sendWhatsApp('Bag'  , 'PKR 1500', 'bags/bag.png ')">
+              Add to Cart
+            </button>
+
+          
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+        <div class="card product-card h-100">
+          <img src="bags/chalebagskin.png" class="card-img-top product-img" alt="Lawn Dresses">
+          <div class="card-body text-center p-2">
+            <h6 class="card-title mb-1">Charles & Kieth</h6>
+            <p class="card-text text-muted small mb-1">PKR 2500</p>
+
+
+ <button class="btn btn-add-cart" 
+              onclick="sendWhatsApp('Charles & Kieth'  , 'PKR 2500', 'bags/chalebagskin.png')">
+              Add to Cart
+            </button>
+
+         
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+        <div class="card product-card h-100">
+          <img src="bags/fendibagmustard.png" class="card-img-top product-img" alt="Lip Gloss">
+          <div class="card-body text-center p-2">
+            <h6 class="card-title mb-1">Fendi Roma</h6>
+            <p class="card-text text-muted small mb-1">PKR 1800</p>
+ <button class="btn btn-add-cart" 
+              onclick="sendWhatsApp('Fendi Bag'  , 'PKR 1800', 'bags/fendibagmustard.png ')">
+              Add to Cart
+            </button>
+
+
+
+           
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+        <div class="card product-card h-100">
+          <img src="images/pexels-kpaukshtite-3270222.jpg" class="card-img-top product-img" alt="Face Serum">
+          <div class="card-body text-center p-2">
+            <h6 class="card-title mb-1">Face Serum</h6>
+            <p class="card-text text-muted small mb-1">PKR 1800</p>
+             <button class="btn btn-add-cart" 
+              onclick="sendWhatsApp('????'  , 'PKR ???', 'bags/fendibagmustard.png ')">
+              Add to Cart
+            </button>
+      
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer-light py-5">
+  <div class="container">
+    <div class="row align-items-start">
+
+      <!-- Brand & About -->
+      <div class="col-md-4 mb-4">
+        <h4 class="fw-bold">Trendy Tribes</h4>
+        <p class="footer-text">
+          Your go-to store for the latest fashion, beauty & lifestyle trends. 
+          Stay stylish every day with Trendy Tribes.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="footer-link">Home</a></li>
+          <li><a href="#" class="footer-link">Products</a></li>
+          <li><a href="#" class="footer-link">About</a></li>
+          <li><a href="#" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold">Follow Us</h5>
+        <div class="social-icons">
+
+           <a href="https://www.facebook.com/share/16otiZmav8/" target="_blank">
+  <i class="bi bi-facebook"></i></a>
+ <a href="https://chat.whatsapp.com/GlYE7wxtqlLIA38MpReVx7" target="_blank" title="Join our WhatsApp Community">
+  <i class="bi bi-whatsapp"></i></a>
+<a href="https://ig.me/236HGUqRsHWDdsp" target="_blank">
+  <i class="bi bi-instagram"></i></a>
+ <a href="https://whatsapp.com/channel/0029Vb9vCxcKGGGIiOGsyU2Q"><i class="bi bi-whatsapp"></i></a>
+
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-4">
+      <p class="small mb-0">© 2025 Trendy Tribes | Designed with ❤️</p>
+    </div>
+  </div>
+</footer>
+
+
+
+</body>
