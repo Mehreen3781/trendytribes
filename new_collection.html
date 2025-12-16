@@ -219,7 +219,21 @@ function sendWhatsApp(productName, productPrice, productImage) {
   </div>
 </section>
 
+<!-----------------------------------java scripts codes here for add to cart button----------->
 
+<script>
+function sendWhatsApp(productName, productPrice, productImage) {
+    const phone = "923163327450";
+    const websiteBaseURL = window.location.origin + "/"; // website ka base URL
+    const fullImageURL = websiteBaseURL + productImage;
+
+    const message = `I am interested to buy this product:\n${productName} - ${productPrice}\nImage: ${fullImageURL}`;
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+}
+</script>
+
+<!-----------------------------------java scripts codes here for add to cart button----------->
 
 <section id="products" class="py-4">
   <div class="container">
@@ -307,7 +321,7 @@ function sendWhatsApp(productName, productPrice, productImage) {
 
 <section id="products" class="py-4">
   <div class="container">
-    <h1 class="text-center mb-4 fw-bold"></h1>
+    <h1 class="text-center mb-4 fw-bold">Partywear/Wedding collection</h1>
     <div class="row g-3 justify-content-center">
 
       <!-- Product 1 -->
